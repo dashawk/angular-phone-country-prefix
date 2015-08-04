@@ -5,10 +5,11 @@
     "Jason <jmpanugaling@gmail.com>"
   ],
   "main": "src/directive/phonePrefix.js",
-  "license": "ISC",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
+    "vendor",
     "bower_components",
     "vendor",
     "test",
