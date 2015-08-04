@@ -1,0 +1,15 @@
+<div class="phone-prefix-directive">
+    <input id="myInput" ng-required="require" ng-click="showList()" class="form-control {{ classes }}" type="text" placeholder="{{ country.phonePrefix }}" value="{{ country.phonePrefix }}" readonly />
+    <div class="dropdown">
+        <button class="selected-flag" ng-click="showList()">
+            <div class="iti-flag {{ country.countryID | lowercase }}"></div>
+        </button>
+        <ul class="country-list" ng-class="{ hide: !drop }">
+            <li ng-click="getCountry(country)" ng-repeat="country in countries">
+                <div class="iti-flag {{ country.countryID | lowercase }}"></div>
+                <span class="country-name">{{ country.name }}</span>
+                <span class="phone-prefix">{{ country.phonePrefix }}</span>
+            </li>
+        </ul>
+    </div>
+</div>
