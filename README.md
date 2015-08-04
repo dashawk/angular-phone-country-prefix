@@ -1,3 +1,16 @@
+Angular directive that provides country prefixes with country name and dial code.
+# Build #
+
+Currently have no build task
+
+# Test #
+
+Test using karma with gulp build system
+
+```cli
+gulp test
+```
+
 # Usage #
 
 First, include as dependency in your angular module.
