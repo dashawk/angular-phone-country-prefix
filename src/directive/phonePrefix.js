@@ -1,7 +1,7 @@
 (function () {
 	var phone = angular.module('phonePrefix', []);
 
-	phone.directive('phonePrefix', function ($rootScope) {
+	phone.directive('phonePrefix', function (scope) {
 		return {
 			restrict: 'EA',
 			replace: true,
@@ -13,23 +13,23 @@
 			},
 			templateUrl: 'src/directive/template.html',
 			link: function (scope, element, attr) {
-				$rootScope.drop = false;
+				scope.drop = false;
 
 				var setValue = function (country) {
 					scope.country = country;
 				};
 
 				scope.hideList = function (country) {
-					$rootScope.drop = false;
+					scope.drop = false;
 					setValue(country);
 				};
 
 				scope.showList = function () {
-					$rootScope.drop = !$rootScope.drop;
+					scope.drop = !scope.drop;
 				};
 				scope.getCountry = function (country) {
 					setValue(country);
-					$rootScope.drop = false;
+					scope.drop = false;
 				};
 
 				scope.$watch('country', function (oldValue, newValue) {
